@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from query_processor import load_faqs, find_best_match
-from translator import translate_text
+from .query_processor import load_faqs, find_best_match
+from .vulabula import vulavula_translator
 
 app = FastAPI()
 
@@ -18,10 +18,10 @@ async def query_faq(query: Query):
         raise HTTPException(status_code=404, detail="No matching FAQ found")
     
     if query.language == "en":
-        return {"question": best_match["question"], "answer": best_match["answer"]}
+        return {"question": best_match["faq"], "answer": best_match["faq_response"]}
     elif query.language in ["zu", "st"]:
-        translated_question = translate_text(best_match["question"], query.language)
-        translated_answer = translate_text(best_match["answer"], query.language)
-        return {"question": translated_question, "answer": translated_answer}
+        translated_question = translate_text(best_match["faq"], query.language)
+        translated_answer = vulavula_translator(best_match["faq_response"], query.language)
+        return {"faq": translated_question, "faq_response": translated_answer}
     else:
         raise HTTPException(status_code=400, detail="Unsupported language")
