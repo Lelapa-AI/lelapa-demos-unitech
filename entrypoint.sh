@@ -7,4 +7,4 @@ cd src/lelapa_demos_unitech
 python scraper.py
 
 # Start the FastAPI application
-exec pdm run start
+exec pdm run start --host 0.0.0.0
