@@ -26,6 +26,7 @@ bot_bot = EskomFAQBot(vulavula_token, faq_file_path)
 
 class Query(BaseModel):
     question: str
+    language: str = None
 
 @app.get("/")
 async def root():
@@ -34,7 +35,7 @@ async def root():
 @app.post("/faq")
 async def answer_question(query: Query):
     try:
-        response = bot_bot.answer_question(query.question)
+        response = bot_bot.answer_question(query.dict())
         return {"answer": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
