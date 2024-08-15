@@ -10,7 +10,7 @@ lelapa-demos-unitech is a FastAPI-based application that allows users to query E
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/lelapa-demos-unitech.git
+   git clone https://github.com/Lelapa-AI/lelapa-demos-unitech.git
    cd lelapa-demos-unitech
    ```
 
