@@ -1,27 +1,41 @@
+import os
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from .query_processor import load_faqs, find_best_match
-from .vulabula import vulavula_translator
+from dotenv import load_dotenv
+from .faq_bot import EskomFAQBot
+
+load_dotenv()
 
 app = FastAPI()
 
-faqs = load_faqs()
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
+# Initialize the EskomFAQBot
+vulavula_token = os.getenv("VULAVULA_API_TOKEN")
+faq_file_path = os.getenv("FAQ_FILE_PATH")
+
+bot_bot = EskomFAQBot(vulavula_token, faq_file_path)
 
 class Query(BaseModel):
-    text: str
-    language: str
+    question: str
 
-@app.post("/query_faq")
-async def query_faq(query: Query):
-    best_match = find_best_match(query.text, faqs)
-    if not best_match:
-        raise HTTPException(status_code=404, detail="No matching FAQ found")
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Eskom FAQ API"}
+
+@app.post("/faq")
+async def answer_question(query: Query):
+    try:
+        response = bot_bot.answer_question(query.question)
+        return {"answer": response}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
     
-    if query.language == "en":
-        return {"question": best_match["faq"], "answer": best_match["faq_response"]}
-    elif query.language in ["zu", "st"]:
-        translated_question = translate_text(best_match["faq"], query.language)
-        translated_answer = vulavula_translator(best_match["faq_response"], query.language)
-        return {"faq": translated_question, "faq_response": translated_answer}
-    else:
-        raise HTTPException(status_code=400, detail="Unsupported language")

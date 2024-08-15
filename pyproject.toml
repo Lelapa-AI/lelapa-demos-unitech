@@ -12,6 +12,10 @@ dependencies = [
     "vulavula>=0.4.0",
     "fuzzywuzzy>=0.18.0",
     "langdetect>=1.0.9",
+    "reportlab>=4.2.2",
+    "fpdf2>=2.7.9",
+    "fastapi>=0.112.0",
+    "uvicorn>=0.30.6",
 ]
 requires-python = ">=3.11"
 readme = "README.md"
@@ -24,3 +28,7 @@ build-backend = "pdm.backend"
 
 [tool.pdm]
 distribution = true
+
+# Add this section
+[tool.pdm.scripts]
+start = "uvicorn src.lelapa_demos_unitech.main:app --reload"
