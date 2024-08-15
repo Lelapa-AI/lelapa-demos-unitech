@@ -1,6 +1,3 @@
-Certainly! I'll create a comprehensive README for your project based on the information you've provided. Here's a draft README.md file for your lelapa-demos-unitech project:
-
-```markdown
 # lelapa-demos-unitech
 
 This project provides an API for querying Eskom FAQs in English.
