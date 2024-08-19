@@ -35,8 +35,9 @@ async def root():
 @app.post("/faq")
 async def answer_question(query: Query):
     try:
-        response = bot_bot.answer_question(query.dict())
+        # Pass both question and language to the answer_question method
+        response = bot_bot.answer_question(query.question, query.language)
         return {"answer": response}
     except Exception as e:
+        print(f"Error in answer_question: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
-    

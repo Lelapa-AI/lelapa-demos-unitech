@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:c36ff1cdceee98f8f7c7b2c64d0bf833713642b397e01bd5c12899ef96c13cc7"
+content_hash = "sha256:d3c74a804f78966a53fe816cf25e7d5ee40a321b82c695089234cd17b9e0977c"
 
 [[metadata.targets]]
 requires_python = ">=3.11"
@@ -538,6 +538,17 @@ dependencies = [
 files = [
     {file = "starlette-0.37.2-py3-none-any.whl", hash = "sha256:6fe59f29268538e5d0d182f2791a479a0c64638e6935d1c6989e63fb2699c6ee"},
     {file = "starlette-0.37.2.tar.gz", hash = "sha256:9af890290133b79fc3db55474ade20f6220a364a0402e0b556e7cd5e1e093823"},
+]
+
+[[package]]
+name = "tenacity"
+version = "9.0.0"
+requires_python = ">=3.8"
+summary = "Retry code until it succeeds"
+groups = ["default"]
+files = [
+    {file = "tenacity-9.0.0-py3-none-any.whl", hash = "sha256:93de0c98785b27fcf659856aa9f54bfbd399e29969b0621bc7f762bd441b4539"},
+    {file = "tenacity-9.0.0.tar.gz", hash = "sha256:807f37ca97d62aa361264d497b0e31e92b8027044942bfa756160d908320d73b"},
 ]
 
 [[package]]
