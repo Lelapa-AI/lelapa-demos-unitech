@@ -1,0 +1,102 @@
+{
+  "Customer Questions": {
+    "keywords": [
+      "prepaid meter",
+      "electricity",
+      "Emfuleni",
+      "STS meter",
+      "TID Rollover"
+    ],
+    "faqs": [
+      {
+        "question": "What is a prepaid STS meter?",
+        "answer": "A prepaid STS (Standard Transfer Specification) meter is a device used to allow customers to pay for electricity in advance. This system lets customers purchase electricity tokens that are then entered into the meter to get electricity. The STS meters help customers manage their electricity usage and avoid unexpected bills."
+      },
+      {
+        "question": "Who should I contact if I have issues with my prepaid meter?",
+        "answer": "If you encounter any issues with your prepaid meter, you can reach out to Emfuleni’s support via WhatsApp at 087 250 2853 (Self-service platform) or by calling 087 183 4606 for live support. For email inquiries, contact emfuleni@galacticenergy.com or electricity@emfuleni.gov.za."
+      },
+      {
+        "question": "How can I purchase electricity for my prepaid meter?",
+        "answer": "You can purchase electricity for your prepaid meter from a variety of vendors, including supermarkets, online platforms, ATMs, and mobile banking apps. Once you've made a purchase, you'll receive a 20-digit token to input into your meter. Some of the vendors you can use include Spar, BP, Shell, Engen, Shoprite/Checkers, Pick n Pay, Dischem, Glocell, ABSA, Standard Bank, Capitec, FNB, Nedbank, Flash vendors, Dellcell outlets, Kazang outlets, Itopitup outlets, Prepaid 24, Powertime, Caltex, Edcon, Sasol, Cell Air, Mr Prepaid, Peoples Prepaid, Ice Cloud, Unipin, and Airtime Anytime."
+      },
+      {
+        "question": "Can I transfer my prepaid meter credit to another meter or property?",
+        "answer": "No, prepaid meter credit is tied to the specific meter and cannot be transferred to another meter or property. If you move, you’ll need to purchase new electricity tokens for the meter at your new location."
+      },
+      {
+        "question": "How can I protect my meter from tampering or theft?",
+        "answer": "Tampering with your meter is illegal and can lead to fines or disconnection. To safeguard your meter, make sure it’s installed in a secure location and promptly report any suspicious activity to Emfuleni Local Municipality. You can do this through the self-service WhatsApp platform at 087 250 2853, by calling 087 183 4606 for live support, or by emailing emfuleni@galacticenergy.com or electricity@emfuleni.gov.za."
+      },
+      {
+        "question": "What should I do if my meter displays an error code?",
+        "answer": "Error codes can signal a range of issues, from a low battery to communication problems. Check your meter’s user manual for specific details on the error code, or contact Emfuleni for assistance. You can reach live support at 087 183 4606, or email emfuleni@galacticenergy.com or electricity@emfuleni.gov.za."
+      },
+      {
+        "question": "How can I check my remaining electricity balance?",
+        "answer": "Press the balance check button on your prepaid meter (usually marked as 'B' or 'Enter'). The remaining kWh will be displayed on the screen."
+      },
+      {
+        "question": "Can I track my electricity usage over time?",
+        "answer": "Yes, many prepaid meters allow you to track your electricity consumption over time. By regularly checking your balance and monitoring your usage patterns, you can manage your electricity consumption more effectively."
+      },
+      {
+        "question": "My Hexing meter is displaying a 'Comms Failed' message. What should I do?",
+        "answer": "If your Hexing prepaid meter is unable to connect with the Customer Interface Unit (CIU) and you’re seeing a 'Comms Failed' message, try moving the CIU to a different power socket in your home. This is the first step to resolve the communication issue between your Hexing meter and your power company. Another possible solution is to type 868 on the device and press enter. If there's been a communication breakdown, you’ll see a 'reject' message on the screen. After that, you can enter your token number, and it should work."
+      },
+      {
+        "question": "What should I do if my Hexing meter is showing a blank screen?",
+        "answer": "If your Hexing meter is not turning on and displaying a blank screen, follow these steps:\n\n1. Check the Power Supply: Ensure that the meter is receiving power. Try plugging it into a different socket to see if that resolves the issue.\n2. Inspect the Cable: Verify that the power cable is functioning properly. If the cable is damaged, it may prevent the meter from turning on.\n3. Insert Batteries: Make sure the batteries are properly installed in the meter. This might help in powering the device.\n4. Check the Fuse: Inspect the fuse on the plug to ensure it hasn’t burnt out. If the fuse is damaged, replacing it might restore power to the meter.\n5. Contact Emfuleni: If all of the above checks are fine and the meter still doesn’t turn on, contact the municipality for further assistance by calling 087 183 4606 for live support, or by emailing emfuleni@galacticenergy.com or electricity@emfuleni.gov.za."
+      },
+      {
+        "question": "Can I get a refund if I accidentally purchase the wrong amount of electricity?",
+        "answer": "Unfortunately, prepaid electricity purchases are non-refundable. It’s important to double-check the amount before completing your purchase."
+      },
+      {
+        "question": "What is the TID Rollover, and why is it important?",
+        "answer": "The TID Rollover is a mandatory global update for all prepaid electricity meters to reset the Token Identifier (TID) back to zero, ensuring the meter continues to accept new tokens. This process must be completed by November 24, 2024, to avoid disruptions in electricity supply."
+      },
+      {
+        "question": "How do I perform the TID Rollover on my meter?",
+        "answer": "When you purchase electricity, you will receive two special 20-digit tokens called 'key change tokens' on your receipt. Enter these tokens into your meter before entering any regular electricity credit tokens. This update is essential for the continued functionality of your meter."
+      },
+      {
+        "question": "How will I know if my meter needs the TID Rollover update?",
+        "answer": "If your meter has an 11-digit number (e.g., 14445707000 or 07072544328), it requires the update. If you are unsure, contact Emfuleni’s support for confirmation."
+      },
+      {
+        "question": "Do BXC smart meters require the TID rollover update?",
+        "answer": "No, BXC smart meters operate on a different system and do not require the TID rollover update. This update is specific to 11-digit STS prepaid meters."
+      },
+      {
+        "question": "What are key change tokens, and why am I seeing them on my receipt?",
+        "answer": "Key change tokens are special 20-digit codes needed to update your meter for the new TID cycle. These tokens will appear on your electricity purchase receipt. You must enter these tokens before entering your regular electricity token to ensure your meter continues to function properly."
+      },
+      {
+        "question": "How do I enter the key change tokens?",
+        "answer": "Enter the two key change tokens into your meter just like you would with any regular credit token:\n\n1. Enter key change token 1: Enter the first 20-digit code and wait for acceptance.\n2. Enter key change token 2: Enter the second 20-digit code and wait for acceptance.\n3. Enter your regular credit token: Recharge your units as usual after the update."
+      },
+      {
+        "question": "Can I use my old credit tokens after the update?",
+        "answer": "No, you must use all your old credit tokens before entering the key change tokens. Once your meter is updated, it will only accept tokens that are compatible with the new TID system. Unused old tokens cannot be refunded."
+      },
+      {
+        "question": "How do I know if my meter has been successfully updated?",
+        "answer": "Your meter will accept your credit token only after you have successfully loaded the two key change tokens. If the credit token is accepted, your meter has been updated."
+      },
+      {
+        "question": "What should I do if my meter doesn’t accept the key change tokens?",
+        "answer": "If your meter does not accept the key change tokens, write down the error message and contact Emfuleni’s support for assistance. They may guide you through the process or send a technician if needed."
+      },
+      {
+        "question": "Is there a deadline for using the key change tokens?",
+        "answer": "Yes, you must enter the key change tokens before the TID Rollover cut-off in November 2024. Failing to do so will prevent your meter from accepting new credit tokens, leading to a loss of electricity supply."
+      },
+      {
+        "question": "Will I get new key change tokens with every electricity purchase?",
+        "answer": "No, you will only receive key change tokens once. After successfully updating your meter with the key change tokens, you can proceed to buy electricity as usual."
+      }
+    ]
+  }
+}
+  

@@ -11,9 +11,24 @@ import logging
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-class FAQScraper:
+class FAQDATA:
     def __init__(self, url: str):
         self.url = url
+    
+    def load_faq_data(self, file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8-sig') as f:
+                data = f.read()
+                # print(data)
+                return json.loads(data)
+        except json.JSONDecodeError as e:
+            logging.error(f"Failed to decode JSON from {file_path}: {e}")
+            return []
+        except Exception as e:
+            logging.error(f"An unexpected error occurred while loading JSON from {file_path}: {e}")
+            return []
+
+
 
     def scrape(self) -> List[Dict[str, str]]:
         logging.info(f"Scraping FAQs from {self.url}")
@@ -40,45 +55,56 @@ class FAQScraper:
         except requests.RequestException as e:
             logging.error(f"Error scraping FAQs: {e}")
             return []
-        
+
+
+
 class FAQCategorizer:
     def __init__(self):
         self.categories = {
             "Customer Questions": {
-                "keywords": ["prepayment", "meter", "save money", "electricity"],
+                "keywords": ["prepayment", "meter", "save money", "electricity", "purchase", "balance", "refund"],
                 "faqs": []
             },
             "Vending Questions": {
-                "keywords": ["sell electricity", "vending", "XMLVend"],
+                "keywords": ["sell electricity", "vending", "XMLVend", "token"],
                 "faqs": []
             },
             "Meter Manufacturer Questions": {
-                "keywords": ["prepaid meters", "reliability", "service area", "theft"],
+                "keywords": ["prepaid meters", "reliability", "service area", "theft", "Hexing"],
                 "faqs": []
             },
             "Technical Questions": {
-                "keywords": ["acronyms", "tamper detection", "tokens"],
+                "keywords": ["acronyms", "tamper detection", "tokens", "TID Rollover", "key change"],
+                "faqs": []
+            },
+            "Emfuleni Support": {
+                "keywords": ["support", "contact", "WhatsApp", "email", "phone"],
+                "faqs": []
+            },
+            "Emfuleni Meter Operations": {
+                "keywords": ["error code", "blank screen", "Comms Failed", "update"],
                 "faqs": []
             }
         }
 
-    def categorize(self, faqs: List[Dict[str, str]]) -> Dict[str, Dict]:
+    def categorize(self, faqs: List[Dict[str, str]], faq_type: str = "eskom") -> Dict[str, Dict]:
         for faq in faqs:
             categorized = False
-            question = faq.get('faq', faq.get('question', ''))  # Try both 'faq' and 'question' keys
-            answer = faq.get('faq_response', faq.get('answer', ''))  # Try both 'faq_response' and 'answer' keys
+            question = faq.get('faq', faq.get('question', ''))
+            answer = faq.get('faq_response', faq.get('answer', ''))
             
             for category, data in self.categories.items():
-                if 'keywords' in data and any(keyword.lower() in question.lower() for keyword in data['keywords']):
+                if 'keywords' in data and any(keyword.lower() in question.lower() or keyword.lower() in answer.lower() for keyword in data['keywords']):
                     data['faqs'].append({"question": question, "answer": answer})
                     categorized = True
                     break
             
             if not categorized:
                 # Add to a general category if not categorized
-                if "General Questions" not in self.categories:
-                    self.categories["General Questions"] = {"faqs": []}
-                self.categories["General Questions"]["faqs"].append({"question": question, "answer": answer})
+                general_category = "General Questions" if faq_type == "eskom" else "Emfuleni General Questions"
+                if general_category not in self.categories:
+                    self.categories[general_category] = {"faqs": []}
+                self.categories[general_category]["faqs"].append({"question": question, "answer": answer})
         
         return self.categories
 
@@ -89,8 +115,24 @@ class FAQCategorizer:
             for question in questions:
                 self.categories[category]["faqs"].append({
                     "question": question,
-                    "answer": "Please contact Eskom support for a detailed answer to this question."
+                    "answer": "Please contact support for a detailed answer to this question."
                 })
+    
+    def merge_faqs(self, emfuleni_faqs, categorized_eskom_faqs):
+        # Create a copy of emfuleni_faqs to avoid modifying the original
+        combined_faqs = emfuleni_faqs.copy()
+        
+        # Iterate through the categories in categorized_eskom_faqs
+        for category, content in categorized_eskom_faqs.items():
+            if category not in combined_faqs:
+                # If the category doesn't exist in combined_faqs, add it
+                combined_faqs[category] = content
+            else:
+                # If the category exists, extend the keywords and faqs lists
+                combined_faqs[category]['keywords'].extend(content['keywords'])
+                combined_faqs[category]['faqs'].extend(content['faqs'])
+        
+        return combined_faqs
 
 
 class FAQExporter:
@@ -133,24 +175,36 @@ def main():
     # Configuration
     url = "https://www.eskom.co.za/prepayment/frequently-asked-questions/"
     output_dir = 'data'
-    json_filename = os.path.join(output_dir, 'eskom_faqs_categorized.json')
-    pdf_filename = os.path.join(output_dir, 'eskom_faqs_categorized.pdf')
+    json_filename = os.path.join(output_dir, 'categorized_faqs.json')
+    pdf_filename = os.path.join(output_dir, 'categorized_faqs.pdf')
 
     # Ensure output directory exists
     os.makedirs(output_dir, exist_ok=True)
 
-    # Scrape FAQs
-    scraper = FAQScraper(url)
-    faqs = scraper.scrape()
+    # Load Emfuleni FAQs from a JSON file
+    emfuleni_faq_file_path = os.getenv("EMFULENI_FAQ_FILE_PATH")
 
-    # Categorize FAQs
+    emfuleni_faqs = []
+    if emfuleni_faq_file_path:
+        faq_data = FAQDATA(url)
+        emfuleni_faqs = faq_data.load_faq_data(emfuleni_faq_file_path)
+    else:
+        logging.error("Environment variable EMFULENI_FAQ_FILE_PATH is not set.")
+
+    # Scrape Eskom FAQs
+    scraper = FAQDATA(url)
+    eskom_faqs = scraper.scrape()
+
+    # Categorize Eskom FAQs
     categorizer = FAQCategorizer()
-    categorized_faqs = categorizer.categorize(faqs)
+    categorized_eskom_faqs = categorizer.categorize(eskom_faqs, faq_type="eskom")
+
+    all_faqs =categorizer.merge_faqs(emfuleni_faqs, categorized_eskom_faqs)
 
     # Export FAQs
-    FAQExporter.to_json(categorized_faqs, json_filename)
-    FAQExporter.to_pdf(categorized_faqs, pdf_filename)
-
+    FAQExporter.to_json(all_faqs, json_filename)
+    # FAQExporter.to_pdf(all_faqs, pdf_filename)
+    print()
     logging.info("FAQ processing completed successfully")
 
 if __name__ == "__main__":
