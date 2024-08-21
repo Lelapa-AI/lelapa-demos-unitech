@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from .faq_bot import EskomFAQBot
+from .client import EskomFAQBot
 
 load_dotenv()
 
@@ -20,10 +20,11 @@ app.add_middleware(
 
 # Initialize the EskomFAQBot
 vulavula_token = os.getenv("VULAVULA_API_TOKEN")
-eskom_faq_file_path = os.getenv("ESKOM_FAQ_FILE_PATH")
-emfuleni_faq_file_path = os.getenv("EMFULENI_FAQ_FILE_PATH")
+# eskom_faq_file_path = os.getenv("ESKOM_FAQ_FILE_PATH")
+# emfuleni_faq_file_path = os.getenv("EMFULENI_FAQ_FILE_PATH")
+faq_file_path = os.getenv("FAQ_FILE_PATH")
 
-bot_bot = EskomFAQBot(vulavula_token, eskom_faq_file_path, emfuleni_faq_file_path)
+bot_bot = EskomFAQBot(vulavula_token, faq_file_path)
 
 class Query(BaseModel):
     question: str
