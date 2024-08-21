@@ -83,9 +83,34 @@ class FAQExporter:
         
         doc.build(content)
 
+
 def convert_faq_data(input_data, client: VulavulaClient):
     # Initialize the structure for the output JSON
     output_data = {"faq": []}
+
+    # Configure logging
+    logging.basicConfig(level=logging.INFO)
+
+    def translate_text(text, target_lang):
+        max_retries = 5
+        retry_delay = 1
+        for attempt in range(max_retries):
+            try:
+                translation_data = {
+                    "input_text": text,
+                    "source_lang": "eng_Latn",
+                    "target_lang": target_lang
+                }
+                translated_response = client.translate(translation_data)
+                return translated_response['translation'][0]['translated_text']
+            except VulavulaError as e:
+                if attempt < max_retries - 1:
+                    logging.info(f"Attempt {attempt + 1} failed with error {e}. Retrying in {retry_delay} seconds...")
+                    time.sleep(retry_delay)
+                    retry_delay *= 2  # Exponential backoff
+                else:
+                    logging.error(f"Attempt {attempt + 1} failed with error {e}. No more retries left.")
+                    return "Translation failed"
 
     # Process each entry in the input data
     for entry in input_data:
@@ -182,33 +207,12 @@ def convert_faq_data(input_data, client: VulavulaClient):
         else:
             intent = 'general_prepaid_meter'
 
-        # Convert question to IsiZulu
-        max_retries = 3
-        retry_delay = 5  # seconds
-        translated_question = None
+        # Translate question to other languages
+        isizulu_translated_question = translate_text(question, "zul_Latn")
+        sotho_translated_question = translate_text(question, "sot_Latn")
+        afrikaans_translated_question = translate_text(question, "afr_Latn")
 
-        for attempt in range(max_retries):
-            try:
-                translation_data = {
-                "input_text": question,
-                "source_lang": "eng_Latn",
-                "target_lang": "zul_Latn"
-                }
-                translated_response = client.translate(translation_data)
-                translated_question = translated_response['translation'][0]['translated_text']                
-                break
-            except VulavulaError as e:
-                if attempt < max_retries - 1:
-                    print(f"Attempt {attempt + 1} failed with error {e}. Retrying in {retry_delay} seconds...")
-                    time.sleep(retry_delay)
-                else:
-                    print(f"Attempt {attempt + 1} failed with error {e}. No more retries left.")
-                    # Handle failure case here, e.g., skip translation or log error
-                    translated_question = "Translation failed"
-
-
-        # Create the example translations (for now, just a placeholder example)
-        examples = [question, translated_question]
+        examples = [question, isizulu_translated_question, sotho_translated_question, afrikaans_translated_question]
 
         # Append the formatted entry to the output data
         output_data["faq"].append({
@@ -218,6 +222,7 @@ def convert_faq_data(input_data, client: VulavulaClient):
         })
 
     return output_data
+
 
 def main():
         # Load environment variables
