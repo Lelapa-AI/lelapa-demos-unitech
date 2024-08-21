@@ -20,12 +20,6 @@ app.add_middleware(
 
 # Initialize the EskomFAQBot
 vulavula_token = os.getenv("VULAVULA_API_TOKEN")
-# eskom_faq_file_path = os.getenv("ESKOM_FAQ_FILE_PATH")
-# emfuleni_faq_file_path = os.getenv("EMFULENI_FAQ_FILE_PATH")
-# faq_file_path = os.getenv("FAQ_FILE_PATH")
-# bot_bot = EskomFAQBot(vulavula_token, faq_file_path)
-
-vulavula_token = os.getenv("VULAVULA_API_TOKEN")
 eskom_faq_file_path = os.getenv("ESKOM_FAQ_FILE_PATH")
 emfuleni_faq_file_path = os.getenv("EMFULENI_FAQ_FILE_PATH")
 

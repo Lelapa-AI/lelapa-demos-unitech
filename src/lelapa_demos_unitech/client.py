@@ -1,7 +1,5 @@
 import json
 from vulavula import VulavulaClient
-from dotenv import load_dotenv
-import os
 
 class EskomFAQBot:
     def __init__(self, vula_vula_token, eskom_faq_file_path, emfuleni_faq_file_path):
@@ -61,7 +59,7 @@ class EskomFAQBot:
                         return {
                             "intent": top_intent,
                             "confidence": top_confidence,
-                            "answer": item['answer']  # Assuming each FAQ item has an 'answer' field
+                            "answer": item['answer']
                         }
 
                 # If intent is not found in the faq_data
