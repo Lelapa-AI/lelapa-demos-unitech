@@ -26,7 +26,7 @@ lelapa-demos-unitech is a FastAPI-based application that allows users to query E
 
 4. Run the scraper to collect FAQ data:
    ```
-   pdm run scraper
+   pdm run data
    ```
 
 5. Start the API:
@@ -54,7 +54,8 @@ FAQ_FILE_PATH=/path/to/your/faq/file
 ```
 
 - `VULAVULA_API_TOKEN`: Your API token for the VulaVula service.
-- `FAQ_FILE_PATH`: The path to the FAQ file used by the application.
+- `EMFULENI_FAQ_FILE_PATH`: The path to the FAQ file from eskom used by the application.
+- `ESKOM_FAQ_FILE_PATH`: The path to the FAQ file from emfuleni used by the application.
 
 Replace `your_vulavula_api_token` and `/path/to/your/faq/file` with your actual values.
 
