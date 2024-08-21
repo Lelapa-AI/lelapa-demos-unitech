@@ -36,6 +36,22 @@ class EskomFAQBot:
                 })
 
         return classification_data
+    
+    def translate_answer(self, answer, language):
+        # Implement your translation logic here
+        # This is a placeholder for actual translation code
+        try:
+            translation_data = {
+            "input_text": answer,
+            "source_lang": "eng_Latn",
+            "target_lang": language
+            }
+            translated_answer = self.client.translate(translation_data)
+            return translated_answer
+        except Exception as e:
+            print(f"An error occurred during translation: {e}")
+            return "Error translating the answer."
+
 
     def answer_question(self, question, language=None):
         classification_data = self.prepare_classification_data()
@@ -56,9 +72,15 @@ class EskomFAQBot:
                 # Map intent to the corresponding FAQ answer
                 for item in self.faq_data['faq']:
                     if item['intent'] == top_intent:
-                        return item['answer']
-                # If intent is not found in the faq_data
-                return f"No corresponding answer was found."
+                        answer = item['answer']
+                        break
+                
+                # Translate answer if language is specified
+                if language:
+                    response = self.translate_answer(answer, language)
+                    answer = response['translation'][0]['translated_text']
+                
+                return answer
             else:
                 return "No probabilities found in classification results."
         except Exception as e:
