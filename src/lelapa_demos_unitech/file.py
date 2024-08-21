@@ -1,21 +1,34 @@
 import json
 from vulavula import VulavulaClient
-from fuzzywuzzy import process
 from dotenv import load_dotenv
 import os
 
 # Load environment variables from .env file
 load_dotenv()
 
-# Retrieve the file path from the environment variable
-faq_data_path = os.getenv('FAQ_FILE_PATH')
+# Retrieve the file paths from the environment variables
+eskom_faq_data_path = os.getenv('ESKOM_FAQ_FILE_PATH')
+emfuleni_faq_data_path = os.getenv('EMFULENI_FAQ_FILE_PATH')
 
 # Initialize Vulavula client
 client = VulavulaClient(os.getenv("VULAVULA_API_TOKEN"))
 
-# Load the JSON data using the path from the .env file
-with open(faq_data_path, 'r') as f:
-    faq_data = json.load(f)
+# Load the JSON data from both Eskom and Emfuleni FAQ files
+faq_data = {
+    "faq": []
+}
+
+try:
+    with open(eskom_faq_data_path, 'r') as f:
+        eskom_data = json.load(f)
+        faq_data['faq'].extend(eskom_data['faq'])
+
+    with open(emfuleni_faq_data_path, 'r') as f:
+        emfuleni_data = json.load(f)
+        faq_data['faq'].extend(emfuleni_data['faq'])
+except FileNotFoundError as e:
+    print(f"Error: {e}")
+    exit()
 
 # Prepare the classification input data
 classification_data = {
@@ -31,6 +44,7 @@ for item in faq_data['faq']:
             "example": example
         })
 
+print(classification_data)
 
 # Prompt the user for input to classify
 user_input = input("Please enter your query: ")
@@ -38,16 +52,99 @@ user_input = input("Please enter your query: ")
 # Add the user input to the classification data
 classification_data['inputs'].append(user_input)
 
-
 # Classify input
-classification_results = client.classify(classification_data)
+try:
+    classification_results = client.classify(classification_data)
+    
+    if classification_results and 'probabilities' in classification_results[0]:
+        probabilities = classification_results[0]['probabilities']
+        sorted_probs = sorted(probabilities, key=lambda x: x['score'], reverse=True)
+        top_intent = sorted_probs[0]['intent']
+        top_confidence = sorted_probs[0]['score']
+        print(f"Identified intent: {top_intent} with confidence {top_confidence}")
+    else:
+        print("No probabilities found in classification results.")
+except Exception as e:
+    print(f"An error occurred while classifying the input: {e}")
 
-# Process classification results
-probabilities = classification_results[0]['probabilities']
-sorted_probs = sorted(probabilities, key=lambda x: x['score'], reverse=True)
-print(sorted_probs[0]['intent'])
 
-print(f"Identified intent: {sorted_probs[0]['intent']} with confidence {sorted_probs[0]['score']}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import json
+# from vulavula import VulavulaClient
+# from fuzzywuzzy import process
+# from dotenv import load_dotenv
+# import os
+
+# # Load environment variables from .env file
+# load_dotenv()
+
+# # Retrieve the file path from the environment variable
+# eskom_faq_data_path = os.getenv('ESKOM_FAQ_FILE_PATH')
+# emfuleni_faq_data_path = os.getenv('EMFULENI_FAQ_FILE_PATH')
+
+# # Initialize Vulavula client
+# client = VulavulaClient(os.getenv("VULAVULA_API_TOKEN"))
+
+# # Load the JSON data using the path from the .env file
+# with open(eskom_faq_data_path, 'r') as f:
+#     faq_data = json.load(f)
+
+# with open(emfuleni_faq_data_path, 'r') as f:
+#     faq_data = json.load(f)
+
+
+# # Prepare the classification input data
+# classification_data = {
+#     "examples": [],
+#     "inputs": []
+# }
+
+# # Populate the classification data with examples
+# for item in faq_data['faq']:
+#     for example in item['examples']:
+#         classification_data['examples'].append({
+#             "intent": item['intent'],
+#             "example": example
+#         })
+
+
+# # Prompt the user for input to classify
+# user_input = input("Please enter your query: ")
+
+# # Add the user input to the classification data
+# classification_data['inputs'].append(user_input)
+
+
+# # Classify input
+# classification_results = client.classify(classification_data)
+
+# # Process classification results
+# probabilities = classification_results[0]['probabilities']
+# sorted_probs = sorted(probabilities, key=lambda x: x['score'], reverse=True)
+# print(sorted_probs[0]['intent'])
+
+# print(f"Identified intent: {sorted_probs[0]['intent']} with confidence {sorted_probs[0]['score']}")
 
 
 
