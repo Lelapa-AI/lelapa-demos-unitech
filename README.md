@@ -1,10 +1,10 @@
 # lelapa-demos-unitech
 
-This project provides an API for querying Eskom FAQs in English.
+This project provides an API for querying Emfuleni FAQs.
 
 ## Overview
 
-lelapa-demos-unitech is a FastAPI-based application that allows users to query Eskom FAQs through a simple API interface. It uses PDM for dependency management and includes a scraper for collecting FAQ data.
+lelapa-demos-unitech is a FastAPI-based application that allows users to query Emfuleni FAQs through a simple API interface. It uses PDM for dependency management and includes a scraper for collecting FAQ data.
 
 ## Setup
 
@@ -27,7 +27,7 @@ lelapa-demos-unitech is a FastAPI-based application that allows users to query E
 4. Run the script to collect FAQ data from Eskom Website:
    ```
    cd src/lelapa_demos_unitech/
-   pdm run data
+   pdm run data.py
    ```
 
 5. Start the API:
