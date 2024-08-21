@@ -1,0 +1,344 @@
+{
+    "faq": [
+      {
+        "intent": "prepaid_meter",
+        "examples": [
+          "What is a prepaid STS meter?",
+          "Yini i-prepaid STS meter?",
+          "Ke eng prepaid STS meter?",
+          "Wat is 'n voorafbetaalde STS-meter?"
+        ],
+        "answer": "A prepaid STS (Standard Transfer Specification) meter is a device used to allow customers to pay for electricity in advance. This system lets customers purchase electricity tokens that are then entered into the meter to get electricity. The STS meters help customers manage their electricity usage and avoid unexpected bills."
+      },
+      {
+        "intent": "prepaid_meter_issues",
+        "examples": [
+          "Who should I contact if I have issues with my prepaid meter?",
+          "Ngibani engingabathinta uma nginenkinga nge-prepaid meter yami?",
+          "Ke kopa thuso ka prepaid meter ya ka, nka ikopanya le mang?",
+           "Wie moet ek kontak as ek probleme het met my voorafbetaalde meter?"
+        ],
+        "answer": "If you have issues with your prepaid meter, you should contact your electricity service provider or the technical support team associated with your meter. They can assist with troubleshooting and resolving the issue."
+      },
+      {
+        "intent": "purchase_electricity",
+        "examples": [
+          "How can I purchase electricity for my prepaid meter?",
+          "Ngingayithenga kanjani ugesi we-prepaid meter yami?",
+          "Nka reka jwang motlakase bakeng sa prepaid meter ya ka?",
+          "Hoe kan ek elektrisiteit koop vir my voorafbetaalde meter?"
+        ],
+        "answer": "You can purchase electricity for your prepaid meter through various channels, such as online portals, mobile apps, or physical vending points. Once purchased, you'll receive a token that you need to enter into your meter."
+      },
+      {
+        "intent": "transfer_credit",
+        "examples": [
+          "Can I transfer my prepaid meter credit to another meter or property?",
+          "Ngingadlulisela yini isikweletu se-prepaid meter yami kwenye i-meter noma esakhiweni?",
+          "Nka fetisetsa jwang tjhelete ya prepaid meter ya ka meter e nngwe kapa ntlong e nngwe?",
+          "Kan ek my voorafbetaalde meterkrediet oordra na 'n ander meter of eiendom?"
+        ],
+        "answer": "Generally, prepaid meter credit is tied to the specific meter and cannot be transferred to another meter or property. It's important to use the credit on the intended meter before moving or changing locations."
+      },
+      {
+        "intent": "meter_protection",
+        "examples": [
+          "How can I protect my meter from tampering or theft?",
+          "Ngingayivikela kanjani i-meter yami ekuphazamiseni noma ekwebelweni?",
+          "Nka sireletsa jwang meter ya ka hore e se ke ya utsuwa kapa ya qhekellwa?",
+          "Hoe kan ek my meter beskerm teen knoeiery of diefstal?"
+        ],
+        "answer": "To protect your meter from tampering or theft, you can install the meter in a secure location, use tamper-evident seals, and regularly inspect the meter for any signs of interference. Report any suspicious activity to your service provider."
+      },
+      {
+        "intent": "error_codes",
+        "examples": [
+          "What should I do if my meter displays an error code?",
+          "Kufanele ngenzeni uma i-meter yami ibonisa ikhodi yephutha?",
+          "Ke etsang ha meter ya ka e bontsha khoutu ya phoso?",
+          "Wat moet ek doen as my meter 'n foutkode vertoon?"
+        ],
+        "answer": "If your meter displays an error code, refer to the meter's manual or contact your service provider for guidance. Some common solutions may include entering a reset code, checking the power supply, or restarting the meter."
+      },
+      {
+        "intent": "check_balance",
+        "examples": [
+          "How can I check my remaining electricity balance?",
+          "Ngingayibheka kanjani ibhalansi yegesi esele?",
+          "Nka hlahloba jwang chelete e setseng ya motlakase?",
+          "Hoe kan ek my oorblywende elektrisiteitsbalans nagaan?"
+        ],
+        "answer": "To check your remaining electricity balance, press the balance check button on your prepaid meter (usually marked as 'B' or 'Enter'). The remaining kWh will be displayed on the screen."
+      },
+      {
+        "intent": "track_usage",
+        "examples": [
+          "Can I track my electricity usage over time?",
+          "Ngingakulandela yini ukusetshenziswa kwegasi lwami ngokuhamba kwesikhathi?",
+          "Nka latela jwang tshebediso ya motlakase wa ka ka nako?",
+          "Kan ek my elektrisiteitsverbruik oor tyd monitor?"
+        ],
+        "answer": "Yes, many prepaid meters allow you to track your electricity usage over time. You can view your consumption history through the meter’s display or by using a connected app if available."
+      },
+      {
+        "intent": "hexing_comms_failed",
+        "examples": [
+          "My Hexing meter is displaying a 'Comms Failed' message. What should I do?",
+          "I-meter yami ye-Hexing ibonisa umlayezo othi 'Comms Failed'. Kufanele ngenzeni?",
+          "Meter ya ka ya Hexing e bontsha molaetsa wa 'Comms Failed'. Ke etsang?",
+          "My Hexing meter vertoon 'Comms Failed'. Wat moet ek doen?"
+        ],
+        "answer": "If your Hexing meter displays a 'Comms Failed' message, it usually indicates a communication issue between the meter and the service provider. Try resetting the meter or contact customer support for assistance."
+      },
+      {
+        "intent": "hexing_blank_screen",
+        "examples": [
+          "What should I do if my Hexing meter is showing a blank screen?",
+          "Kufanele ngenzeni uma i-meter yami ye-Hexing ibonisa isikrini esingenalutho?",
+          "Ke etsang ha meter ya ka ya Hexing e bontsha skrineng se se nang letho?",
+          "Wat moet ek doen as my Hexing-meter 'n leë skerm wys?"
+        ],
+        "answer": "A blank screen on your Hexing meter may indicate a power issue or a meter malfunction. Check the power supply and ensure the meter is properly connected. If the problem persists, contact your service provider for support."
+      },
+      {
+        "intent": "refund",
+        "examples": [
+          "Can I get a refund if I accidentally purchase the wrong amount of electricity?",
+          "Ngingathola yini ukubuyiselwa imali uma ngithenga amaphutha ogesi we-prepaid?",
+          "Nka fumana puseletso haeba ke rekile motlakase o fosahetseng?",
+          "Kan ek 'n terugbetaling kry as ek per ongeluk die verkeerde hoeveelheid elektrisiteit koop?"
+        ],
+        "answer": "Refund policies for prepaid electricity may vary depending on your service provider. In some cases, you may be eligible for a refund or credit adjustment if you accidentally purchase the wrong amount of electricity. Contact your service provider for specific details."
+      },
+      {
+        "intent": "tid_rollover",
+        "examples": [
+          "What is the TID Rollover, and why is it important?",
+          "Yini i-TID Rollover, futhi kungani ibalulekile?",
+          "Ke eng TID Rollover, mme hobaneng e le ya bohlokwa?",
+          "Wat is die TID Rollover, en waarom is dit belangrik?"
+        ],
+        "answer": "The TID (Token Identifier) Rollover is a process that updates your prepaid meter to continue accepting electricity tokens after the TID limit is reached. This update is essential to ensure your meter continues to function correctly and can accept new tokens."
+      },
+      {
+        "intent": "tid_rollover_process",
+        "examples": [
+          "How do I perform the TID Rollover on my meter?",
+          "Ngingayenza kanjani i-TID Rollover ku-meter yami?",
+          "Nka etsa jwang TID Rollover meter ya ka?",
+          "Hoe voer ek die TID Rollover op my meter uit?"
+        ],
+        "answer": "To perform the TID Rollover on your meter, you will need to enter a series of key change tokens provided by your service provider. Follow the specific instructions given to you to complete the update process."
+      },
+      {
+        "intent": "tid_rollover_requirement",
+        "examples": [
+          "How will I know if my meter needs the TID Rollover update?",
+          "Ngizokwazi kanjani ukuthi i-meter yami idinga ukubuyekezwa kwe-TID Rollover?",
+          "Ke tla tseba jwang ha meter ya ka e hloka ntjhafatso ya TID Rollover?",
+          "Hoe sal ek weet of my meter die TID Rollover-opdatering benodig?"
+        ],
+        "answer": "Your service provider will notify you if your meter requires the TID Rollover update. Additionally, your meter may display a message or error code indicating that an update is necessary."
+      },
+      {
+        "intent": "bxc_meters",
+        "examples": [
+          "Do BXC smart meters require the TID rollover update?",
+          "Ngabe ama-meter e-BXC adinga ukubuyekezwa kwe-TID Rollover?",
+          "Na meter ya BXC e hloka ntjhafatso ya TID Rollover?",
+          "Benodig BXC-slimmeters die TID Rollover-opdatering?"
+        ],
+        "answer": "Yes, BXC smart meters, like other prepaid meters, will require the TID Rollover update to continue functioning correctly. Contact your service provider for more information on how to update your meter."
+      },
+      {
+        "intent": "key_change_tokens",
+        "examples": [
+          "What are key change tokens, and why am I seeing them on my receipt?",
+          "Yini ama-key change tokens, futhi kungani ngiwabona kwirisidi lami?",
+          "Ke eng key change tokens, mme hobaneng ke a bona lenaneng la ka?",
+          "Wat is sleutelveranderingtoken en waarom sien ek dit op my kwitansie?"
+        ],
+        "answer": "Key change tokens are special tokens used during the TID Rollover process to update your meter's encryption. If you see them on your receipt, it's likely part of the TID Rollover update, and you should enter them into your meter as instructed."
+      },
+      {
+        "intent": "enter_key_change_tokens",
+        "examples": [
+          "How do I enter the key change tokens?",
+          "Ngingawafaka kanjani ama-key change tokens?",
+          "Nka kenya jwang key change tokens?",
+          "Hoe voer ek die sleutelveranderingtoken in?"
+        ],
+        "answer": "To enter the key change tokens, follow the instructions provided by your service provider. Typically, you'll need to enter the tokens in a specific sequence using the keypad on your prepaid meter."
+      },
+      {
+        "intent": "use_old_tokens",
+        "examples": [
+          "Can I use my old credit tokens after the update?",
+          "Ngingawasebenzisa yini ama-tokens ami amadala ngemva kokubuyekeza?",
+          "Nka sebedisa key change tokens tsa khale kamora ntjhafatso?",
+          "Kan ek my ou krediettokens gebruik ná die opdatering?"
+        ],
+        "answer": "After the TID Rollover update, your old credit tokens may no longer be valid. It's recommended to use up all old tokens before performing the update, or contact your service provider for guidance."
+      },
+      {
+        "intent": "update_success",
+        "examples": [
+          "How do I know if my meter has been successfully updated?",
+          "Ngizokwazi kanjani ukuthi i-meter yami ibuyekezwe ngempumelelo?",
+          "Ke tla tseba jwang ha meter ya ka e ntjhafatswa ka katleho?",
+          "Hoe weet ek of my meter suksesvol opgedateer is?"
+        ],
+        "answer": "You can confirm that your meter has been successfully updated by checking for a confirmation message on the meter's display or by entering a test token provided by your service provider."
+      },
+      {
+        "intent": "update_failure",
+        "examples": [
+          "What should I do if my meter doesn’t accept the key change tokens?",
+          "Kufanele ngenzeni uma i-meter yami ingamukeli ama-key change tokens?",
+          "Ke etsang ha meter ya ka e sa amohele key change tokens?",
+          "Wat moet ek doen as my meter nie die sleutelveranderingtoken aanvaar nie?"
+        ],
+        "answer": "If your meter doesn't accept the key change tokens, try re-entering them carefully. If the issue persists, contact your service provider's support team for assistance."
+      },
+      {
+        "intent": "key_change_deadline",
+        "examples": [
+          "Is there a deadline for using the key change tokens?",
+          "Ngabe kukhona umnqamulajuqu wokusebenzisa ama-key change tokens?",
+          "Na ho na le nako ya ho sebelisa key change tokens?",
+          "Is daar 'n sperdatum vir die gebruik van die sleutelveranderingtoken?"
+        ],
+        "answer": "If your meter doesn't accept the key change tokens, try re-entering them carefully. If the issue persists, contact your service provider's support team for assistance."
+      },{
+        "intent": "future_key_change_tokens",
+        "examples": [
+          "Will I get new key change tokens with every electricity purchase?",
+          "Ngizothola ama-key change tokens amasha njalo lapho ngithenga ugesi?",
+          "Na ke tla fumana key change tokens e ncha ka nako e nngwe le e nngwe ha ke reka motlakase?",
+          "Sal ek nuwe sleutelveranderingtoken kry met elke elektrisiteitsaankoop?"
+        ],
+        "answer": "No, key change tokens are usually provided only when there's a significant update to your meter's software or configuration. For regular electricity purchases, you will continue to receive standard electricity tokens."
+      },
+      {
+        "intent": "key_change_cost",
+        "examples": [
+          "Will I be charged for the key change tokens?",
+          "Ngizokhokhiswa yini ama-key change tokens?",
+          "Na ke tla lefshoa bakeng sa key change tokens?",
+          "Sal ek gehef word vir die sleutelveranderingtoken?"
+        ],
+        "answer": "Key change tokens are generally provided free of charge as part of a necessary update to your meter. However, if you require additional tokens or services, there may be a fee depending on your service provider."
+      },
+      {
+        "intent": "rollover_deadline",
+        "examples": [
+          "What happens if I do not perform the update by the deadline?",
+          "Kuzokwenzekani uma ngingawenzi ukubuyekeza ngaphambi komnqamulajuqu?",
+          "Ho etsahalang ha ke sa etse ntjhafatso pele nako e fela?",
+          "Wat gebeur as ek nie die opdatering teen die sperdatum uitvoer nie?"
+        ],
+        "answer": "If you do not perform the TID rollover update by the deadline, your prepaid meter may stop accepting electricity tokens, leaving you without power. It’s important to complete the update to avoid any service disruption."
+      },
+      {
+        "intent": "meter_installation",
+        "examples": [
+          "How can I request a prepaid meter installation?",
+          "Ngingacela kanjani ukufakelwa kwe-prepaid meter?",
+          "Nka kopa jwang ho kenya prepaid meter?",
+          "Hoe kan ek 'n voorafbetaalde meter-installasie aanvra?"
+        ],
+        "answer": "To request a prepaid meter installation, contact your electricity service provider. They will guide you through the application process and arrange for a technician to install the meter at your property."
+      },
+      {
+        "intent": "emergency_credit",
+        "examples": [
+          "How does emergency credit work on my prepaid meter?",
+          "Isebenza kanjani i-emergency credit ku-prepaid meter yami?",
+          "Emergency credit e sebetsa jwang ho prepaid meter ya ka?",
+          "Hoe werk noodgebruikskrediet op my voorafbetaalde meter?"
+        ],
+        "answer": "Emergency credit allows you to continue using electricity when your prepaid balance is low. You can activate it by pressing the emergency button on your meter. Once activated, you’ll need to top up your meter to restore your balance."
+      },
+      {
+        "intent": "meter_reading",
+        "examples": [
+          "Do I need to submit meter readings with a prepaid meter?",
+          "Ngidinga ukuthumela izifundo ze-meter nge-prepaid meter?",
+          "Na ke hloka ho fana ka dipalo tsa meter ha ke sebedisa prepaid meter?",
+          "Moet ek meterlesings indien met 'n voorafbetaalde meter?"
+        ],
+        "answer": "With a prepaid meter, you typically don’t need to submit meter readings as the system automatically records and updates your usage. However, some service providers may request occasional readings for verification."
+      },
+      {
+        "intent": "tariff_change",
+        "examples": [
+          "How will I know if my electricity tariff has changed?",
+          "Ngizokwazi kanjani uma intengo kagesi yami ishintshile?",
+          "Ke tla tseba jwang ha tefiso ya motlakase e fetohile?",
+          "Hoe sal ek weet as my elektrisiteitstarief verander het?"
+        ],
+        "answer": "Your electricity provider will notify you of any tariff changes. These changes may also be reflected on your purchase receipts or when you check your balance."
+      },
+      {
+        "intent": "meter_maintenance",
+        "examples": [
+          "Is there any maintenance required for my prepaid meter?",
+          "Ngabe kukhona ukunakekela okudingekayo ku-prepaid meter yami?",
+          "Na ho na le tlhokomelo e hlokahalang bakeng sa prepaid meter ea ka?",
+          "Is daar enige instandhouding nodig vir my voorafbetaalde meter?"
+        ],
+        "answer": "Prepaid meters require minimal maintenance. However, it’s important to keep the meter clean and ensure that it’s in good working condition. If you notice any issues, contact your service provider for assistance."
+      },
+      {
+        "intent": "token_expiry",
+        "examples": [
+          "Do prepaid electricity tokens expire?",
+          "Ngabe ama-token kagesi we-prepaid ayaphelelwa isikhathi?",
+          "Na li-token tsa motlakase oa prepaid lia fela?",
+          "Verstryk voorafbetaalde elektrisiteits-token?"
+        ],
+        "answer": "Prepaid electricity tokens do not typically expire. However, it’s recommended to use them soon after purchase to ensure they are valid and to avoid any issues."
+      },
+      {
+        "intent": "load_shedding",
+        "examples": [
+          "How does load shedding affect my prepaid meter?",
+          "Ukucishwa kukagesi kuthinta kanjani i-prepaid meter yami?",
+          "Ho khaoha hoa motlakase ho ama prepaid meter ea ka joang?",
+          "Hoe beïnvloed kragonderbreking my voorafbetaalde meter?"
+        ],
+        "answer": "During load shedding, your prepaid meter will stop providing electricity as there is no power supply. Once power is restored, your meter will automatically resume normal operation."
+      },
+      {
+        "intent": "meter_relocation",
+        "examples": [
+          "Can I move my prepaid meter to a different property?",
+          "Ngingayisusa yini i-prepaid meter yami ngiyise komunye umuzi?",
+          "Na nka tsamaisa prepaid meter ea ka ho ea setša se seng?",
+          "Kan ek my voorafbetaalde meter na 'n ander eiendom verskuif?"
+        ],
+        "answer": "Moving a prepaid meter to a different property usually requires approval from your electricity service provider. They may send a technician to relocate the meter for you."
+      },
+      {
+        "intent": "consumption_history",
+        "examples": [
+          "How can I view my electricity consumption history?",
+          "Ngingabuka kanjani umlando wokusetshenziswa kukagesi wami?",
+          "Nka sheba histori ea tšebeliso ea motlakase oa ka joang?",
+          "Hoe kan ek my elektrisiteitsverbruikgeskiedenis sien?"
+        ],
+        "answer": "You can view your electricity consumption history through your meter’s display or via your service provider’s online portal, depending on the type of meter and services they offer."
+      },
+      {
+        "intent": "meter_swap",
+        "examples": [
+          "What is the process for swapping a faulty prepaid meter?",
+          "Yini inqubo yokushintsha i-prepaid meter engasebenzi kahle?",
+          "Ke eng mokhoa oa ho fapanyetsana prepaid meter e sa sebetseng hantle?",
+          "Hoe kan ek my foutiewe voorafbetaalde meter ruil?"
+        ],
+        "answer": "To swap a faulty prepaid meter, contact your electricity service provider. They will assess the issue and arrange for a technician to replace the faulty meter with a new one."
+      }
+    ]
+  }
+  
