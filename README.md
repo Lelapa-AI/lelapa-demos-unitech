@@ -24,8 +24,9 @@ lelapa-demos-unitech is a FastAPI-based application that allows users to query E
    pdm install
    ```
 
-4. Run the scraper to collect FAQ data:
+4. Run the script to collect FAQ data from Eskom Website:
    ```
+   cd src/lelapa_demos_unitech/
    pdm run data
    ```
 
