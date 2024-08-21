@@ -56,14 +56,9 @@ class EskomFAQBot:
                 # Map intent to the corresponding FAQ answer
                 for item in self.faq_data['faq']:
                     if item['intent'] == top_intent:
-                        return {
-                            "intent": top_intent,
-                            "confidence": top_confidence,
-                            "answer": item['answer']
-                        }
-
+                        return item['answer']
                 # If intent is not found in the faq_data
-                return f"Identified intent: {top_intent} with confidence {top_confidence}, but no corresponding answer was found."
+                return f"No corresponding answer was found."
             else:
                 return "No probabilities found in classification results."
         except Exception as e:
