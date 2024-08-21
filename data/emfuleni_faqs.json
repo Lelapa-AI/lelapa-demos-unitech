@@ -191,15 +191,6 @@
         ],
         "answer": "If you do not perform the TID rollover update by the deadline, your prepaid meter may stop accepting electricity tokens, leaving you without power. It’s important to complete the update to avoid any service disruption."
       },
-  
-  
-  
-      
-  
-  
-  
-  
-  
       {
         "intent": "meter_installation",
         "examples": [

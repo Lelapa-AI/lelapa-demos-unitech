@@ -1,7 +1,7 @@
 {
   "faq": [
     {
-      "intent": "prepayment_electricity",
+      "intent": "prepayment_electricity_access",
       "examples": [
         "How do I get prepayment electricity?",
         "Ngingayithola kanjani ugesi ngaphambi kokukhokha?"
@@ -9,7 +9,7 @@
       "answer": "If a customer requests a prepayment meter instead of the monthly billed system, Eskom will provide it where possible but there are a few limitations.You must already have electricity, (normally you will receive a monthly bill.)You must receive your electricity from Eskom. If you receive your electricity from a local supply authority or a municipality, Eskom can unfortunately not give you a prepayment meter. In that case you will have to approach your local supply authority. Many other supply authorities now also provide prepayment meters but since they purchase the electricity in bulk from Eskom and then distribute it as they wish, Eskom cannot dictate whether a third party provides prepayment or an alternative system. If you currently receive an electricity account, the supply authority details will be on it. It should have the name of the supply authority on the account. It should also have a physical address and telephone number where you can enquire about this.Eskom is not installing three-phase prepayment meters any more, so unfortunately it is not at the moment possible for Eskom to provide a three-phase prepayment supply.Note: If you have a prepayment meter, you will have to buy your electricity from a prepayment vending agent that sells electricity for Eskom customers. Luckily there are now several vendors throughout South Africa and it is also possible to purchase electricity via your cell phone or internet.If the above conditions are met, Eskom can usually provide you with a prepayment meter. Look on your account for the contact details and get in touch with your local Eskom office or phone the Eskom National Call centre to enquire about the possibility of getting a prepayment meter. The Call Centre numbers are on the main Eskom web page.If you do not have any electricity yet, you can also contact the Eskom National Call Centre. However there are many requirements and possibly some limitations for new installations, especially in remote rural areas."
     },
     {
-      "intent": "prepaid_meter",
+      "intent": "purchase_own_prepayment_meter",
       "examples": [
         "I want my own prepayment meter(s).",
         "Ngifuna imitha yami yokukhokha kusengaphambili"
@@ -17,7 +17,7 @@
       "answer": "Eskom does not normally provide more than one installation per dwelling but some customers would like additional meters for tenants, flats or holiday camps/homes to enable them to charge occupants for their individual electricity usage. In this case you will have to purchase your own prepayment meters directly from the meter manufacturers and also arrange to get pre-coded electricity tokens from the same manufacturer.Note: You will then have to arrange with an electrician to install these meters for you on your own reticulations system in the house behind your existing meter. The prepayment meter will not replace your existing meter and Eskom will still use your existing meter for your electricity supply.You will not be able to purchase your electricity tokens from Eskom for this new meter and you must arrange with the meter manufacturer to also provide you with a number of pre-coded electricity tokens for selected amounts. You can then use or sell these pre-coded tokens to tenants as required."
     },
     {
-      "intent": "prepayment_electricity",
+      "intent": "prepayment_electricity_savings",
       "examples": [
         "Will I save money with prepayment electricity?",
         "Ingabe ngizonga imali ngogesi obukhokhelwe kusengaphambili?"
@@ -25,7 +25,7 @@
       "answer": "Not necessarily. Eskom has many different tariffs for various consumers depending on their electricity consumption and other needs. Most residential customers with billed meters (not prepayment) pay a large initial installation cost to get electricity. (This initial cost covers part of the cost for the electricity network like the cables, poles, transformers etc.) These customers then also pay a fixed monthly amount in addition to the actual energy portion that is consumed. Because of these additional amounts, the charge per unit of electricity is lower. For prepayment electricity you only pay for the energy consumed but at a somewhat higher rate.If you consume little electricity per month a prepayment meter will be more cost effective. However if you use average or higher electricity, the conventional tariffs will be cheaper.Note that an electric water heater (i.e. a geyser) consumes about 40% to 70% of an average small customer’s energy. Also visit the Eskom web page for more information about saving electricity.There are however other advantages to prepayment:Since the prepayment meter provides a continuous display of how much electricity you have left and also a flashing light showing how fast you are using electricity, many customers find it much easier to budget their electricity usage and to actually save electricity.Many customers do not understand the accounts for the billed system or how the amounts are calculated. With the prepayment system you can be sure you will get a Rand’s worth of electricity for every Rand you pay."
     },
     {
-      "intent": "General",
+      "intent": "electricity_source",
       "examples": [
         "Where do I get my electricity from?",
         "Ngingayithola kuphi ugesi wami?"
@@ -57,7 +57,7 @@
       "answer": "Eskom has a central Online Vending Server (OVS) to sell electricity directly to Vending Agents. Tenders for Vending Agents are typically issues every three- to five- years, but a vending agent is required to develop their own Vending Clients that can communicate to the Eskom server via the standard XMLVend protocol. There is then a lengthy evaluation process to evaluate the tenders and select the most appropriate candidates. Such a contract is usually for a National Agency or a Regional Agency to sell electricity on Eskom’s behalf. The latest enquiry was issued in 2014.If you want to sell electricity for Eskom as an Eskom Agent, it is necessary to participate sucessfully in the next national enquiry for Vending Agencies.If you only want to sell electricity in a specific area or in your town, you can immediately contact any of Eskom’s existing National or Regional Vendors and enquire to become a vending outlet for them. They will often also provide you with all the necessary equipment to sell electricity."
     },
     {
-      "intent": "General",
+      "intent": "sell_online_vending_systems",
       "examples": [
         "I want to sell online vending systems to Eskom",
         "Ngifuna ukuthengisa amasistimu okuzithengisa ku-inthanethi ku-Eskom"
@@ -65,7 +65,7 @@
       "answer": "See the answer above"
     },
     {
-      "intent": "xmlvend",
+      "intent": "xmlvend_description",
       "examples": [
         "What is XMLVend?",
         "Yini i-XMLVend?"
@@ -73,7 +73,7 @@
       "answer": "See this document on XMLVend description"
     },
     {
-      "intent": "xmlvend",
+      "intent": "xmlvend_advantages",
       "examples": [
         "Why use XMLVend?",
         "Kungani usebenzisa i- XMLVend?"
@@ -97,7 +97,7 @@
       "answer": "Eskom installs a vast number of meters every year and follows a strict tender process and evaluation to limit the risks inherent in such a large project. Tenders for new prepayment meters are usually issued every three- to five- years. The basic specifications for the prepayment meters are available in the Specifications section. Please note that compliance to the specifications do not guarantee any orders from Eskom. All the tenders will be evaluated and some of these suppliers may receive contracts.Municipalities do not necessarily use the same criteria as Eskom but in practice often purchase meters that comply to the similar specifications as required by Eskom.If manufacturers want to introduce any new technologies (like remote metering or “smart” metering) that are unproven in the Eskom environment, the process to evaluate new technologies would apply.For both the above scenarios, and if you believe you will comply with the requirements in the referenced documents; contact the Control Technologies representatives to discuss the subject."
     },
     {
-      "intent": "General",
+      "intent": "prepaid_meters_info",
       "examples": [
         "How many prepaid meters are installed?",
         "Zingaki izilinganiso ezikhokhelwa kusengaphambili ezifakiwe?"
@@ -113,7 +113,7 @@
       "answer": "Please ask the various meter suppliers directly for their meter costs. Remember that the meter is only a small component of the complete installation cost."
     },
     {
-      "intent": "service_area",
+      "intent": "service_area_extreme_heat",
       "examples": [
         "Does your service area experience extreme heat?",
         "Ingabe indawo yakho yokusebenzela iyashisa kakhulu?"
@@ -129,7 +129,7 @@
       "answer": "Our suppliers all have ISO 9001 certification.All meters are shipped pre-calibrated and tested. As the devices have electronic measurement and control circuitry, transport damage is not a major issue. Some of our areas have 100% incoming meter inspection and others none. Generally where the supplier’s internal quality assurance has proved to be effective we have stopped incoming meter testing. We do perform random testing of meters coming off the suppliers’ production lines. The out of box failure rate is therefore very low.In South Africa we have a major impact from lightning. Eskom has had to raise the initially specified surge withstand capability of the meters as well as install special surge arrestors within all our meters. The situation was compared to putting a microprocessor out in the field with a 3 kilometer lightning conductor.Currently the STS meters from all the approved manufacturers perform to a very high standard."
     },
     {
-      "intent": "prepaid_meter",
+      "intent": "reason_for_prepayment_meters",
       "examples": [
         "Why were prepayment meters installed?",
         "Kungani kwakhiwa izimali zokuqashisa?"
@@ -153,7 +153,7 @@
       "answer": "We have been researching customer attitudes towards prepayment since 1990.For the newly electrified customers the access to electricity is the most important. As the consumer becomes more sophisticated in their use of electricity their focus turns toward product availability. It is here that the availability of the Point-of-Sale, where prepaid tokens are sold, and the inconvenience of having to go and purchase tokens become important issues. Eskom addresses this by making many options available to purchase electricity.Prepayment meters are installed only after consultation with and in agreement by the community to be electrified. Eskom is careful not to promote prepayment as a solution for theft or to punish customers.Where retrofitting has been done it has been accepted by the customers."
     },
     {
-      "intent": "service_area",
+      "intent": "service_area_size",
       "examples": [
         "How large is your service area?",
         "Uyisebenzisa kanjani indawo yakho?"
@@ -161,7 +161,7 @@
       "answer": "Eskom serves the whole of South Africa (surface area 1 221 037 square kilometers or 470 000 square miles) as the supplier of bulk electricity.For the domestic market Eskom supplies customers directly in most areas falling outside the major cities and towns who have their own municipalities."
     },
     {
-      "intent": "prepaid_meter_issues",
+      "intent": "prepaid_meter_theft",
       "examples": [
         "Does prepayment solve electricity theft problems?",
         "Ingabe ukukhokha kusengaphambili kuyayixazulula inkinga yokweba ugesi?"
@@ -169,7 +169,7 @@
       "answer": "Prepayment does not solve electricity theft by default but it provides a supply authority with the means of managing theft. The best method of controlling theft is still proper management of the system. Eskom analyses the consumption and purchase patterns of customers and site visits are performed if anomalies are detected. Eskom also has a strict procedure to prosecute trespassers.Prepayment provides the following functions to help manage losses.Customers trust prepayment because:There are no fixed monthly charges or reconnection fees. (The customers do not understand why they have to pay this)There is a continuous display of the available credit which allows the customer to budget and it eliminates surprises like a large account at the end of the month.All the money paid is for the customer’s electricity and not used to subsidise other services like refuse removal.The Vending system provides information on customer usage patterns which can be used to detect theft.It is possible to determine how much electricity has been sold to a geographical area so that statistical meters can be used to correlate the consumption per area.Systems are designed such that theft is easily detectable but checks must be performed regularly and corrective actions initiated immediately."
     },
     {
-      "intent": "prepaid_meter",
+      "intent": "decision_for_prepayment_metering",
       "examples": [
         "If you had to do it all over again, would you still decide to go prepayment metering?",
         "Uma kwakudingeka uyenze yonke into futhi, ingabe wawuyosikisela ukuba uqhubeke nokulinganisa imali kusengaphambili?"
@@ -177,7 +177,7 @@
       "answer": "Yes. Eskom has recently developed a new very low energy supply. As part of the development various systems were piloted and analysed, including billed, flat rate and a remote controlled flat rate. Prepayment still turned out to be the most cost effective system while still providing the customer with a value for money product."
     },
     {
-      "intent": "General",
+      "intent": "prepaid_meter_terms_and_acronyms",
       "examples": [
         "What do all the words and acronyms mean?",
         "Asho ukuthini la magama nama-acronym?"

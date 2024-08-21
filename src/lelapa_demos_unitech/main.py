@@ -31,7 +31,7 @@ class Query(BaseModel):
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to the Eskom FAQ API"}
+    return {"message": "Welcome to the Emfuleni FAQ API"}
 
 @app.post("/faq")
 async def answer_question(query: Query):

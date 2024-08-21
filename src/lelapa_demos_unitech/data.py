@@ -96,13 +96,23 @@ def convert_faq_data(input_data, client: VulavulaClient):
         
         # Determine the intent based on the question (or use a predefined mapping)
         # For simplicity, we'll use a basic rule-based approach for assigning intents
-        if 'prepayment electricity' in question_lower:
-            intent = 'prepayment_electricity'
+        if 'purchase own prepayment meter' in question_lower or 'own prepayment meter' in question_lower:
+            intent = 'purchase_own_prepayment_meter'
+        elif 'why were prepayment meters installed' in question_lower or 'reason for prepayment meters' in question_lower:
+            intent = 'reason_for_prepayment_meters'
+        elif 'decision to use prepayment metering' in question_lower or 'go prepayment metering' in question_lower:
+            intent = 'decision_for_prepayment_metering'
+        elif 'how do i get prepayment electricity' in question_lower or 'get prepayment electricity' in question_lower:
+            intent = 'prepayment_electricity_access'
+        elif 'will i save money with prepayment electricity' in question_lower or 'save money with prepayment electricity' in question_lower:
+            intent = 'prepayment_electricity_savings'
         elif 'prepayment meter' in question_lower:
             intent = 'prepaid_meter'
-        elif 'How many prepaid meters' in question_lower:
+        elif 'how many prepaid meters' in question_lower:
             intent = 'prepaid_meters_info'
-        elif 'work' in question_lower or 'problem' in question_lower:
+        elif 'problem' in question_lower:
+            intent = 'prepaid_meter_theft'
+        elif 'work' in question_lower:
             intent = 'prepaid_meter_issues'
         elif 'save money' in question_lower:
             intent = 'save_money'
@@ -132,7 +142,10 @@ def convert_faq_data(input_data, client: VulavulaClient):
         elif 'sell electricity' in question_lower:
             intent = 'sell_electricity'
         elif 'xmlvend' in question_lower:
-            intent = 'xmlvend'
+            if 'what is' in question_lower:
+                intent = 'xmlvend_description'
+            elif 'why use' in question_lower:
+                intent = 'xmlvend_advantages'
         elif 'new metering solution' in question_lower:
             intent = 'new_metering_solution'
         elif 'prepaid meters to eskom' in question_lower:
@@ -140,9 +153,16 @@ def convert_faq_data(input_data, client: VulavulaClient):
         elif 'installed unit cost' in question_lower:
             intent = 'installed_unit_cost'
         elif 'service area' in question_lower:
-            intent = 'service_area'
+            if 'extreme heat' in question_lower:
+                intent = 'service_area_extreme_heat'
+            elif 'size' in question_lower or 'large' in question_lower:
+                intent = 'service_area_size'
+            else:
+                intent = 'service_area'
         elif 'electricity theft' in question_lower:
-            intent = 'electricity_theft'
+            intent = 'prepaid_meter_theft_management'
+        elif 'report' in question_lower or 'work' in question_lower or 'problem' in question_lower:
+            intent = 'prepaid_meter_fault_report'
         elif 'customer reaction' in question_lower:
             intent = 'customer_reaction'
         elif 'prepayment decision' in question_lower:
@@ -153,8 +173,14 @@ def convert_faq_data(input_data, client: VulavulaClient):
             intent = 'tamper_detection'
         elif 'disposable tokens' in question_lower:
             intent = 'disposable_tokens'
+        elif 'words and acronyms' in question_lower or 'terms and acronyms' in question_lower:
+            intent = 'prepaid_meter_terms_and_acronyms'
+        elif 'where do i get my electricity from' in question_lower or 'get electricity' in question_lower:
+            intent = 'electricity_source'
+        elif 'sell online vending systems' in question_lower:
+            intent = 'sell_online_vending_systems'
         else:
-            intent = 'General'
+            intent = 'general_prepaid_meter'
 
         # Convert question to IsiZulu
         max_retries = 3
@@ -192,13 +218,6 @@ def convert_faq_data(input_data, client: VulavulaClient):
         })
 
     return output_data
-
-
-def save_faqs_to_json(faqs, filename):
-    with open(filename, 'w') as file:
-        json.dump(faqs, file, indent=4)
-    print(f"Data saved to {filename}")
-
 
 def main():
         # Load environment variables
