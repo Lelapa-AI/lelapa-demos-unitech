@@ -4,6 +4,7 @@
         "intent": "prepaid_meter",
         "examples": [
           "What is a prepaid STS meter?",
+          "Tell me about sts",
           "Yini i-prepaid STS meter?",
           "Ke eng prepaid STS meter?",
           "Wat is 'n voorafbetaalde STS-meter?"
@@ -14,6 +15,7 @@
         "intent": "prepaid_meter_issues",
         "examples": [
           "Who should I contact if I have issues with my prepaid meter?",
+          "Who do I call if I have a problem?",
           "Ngibani engingabathinta uma nginenkinga nge-prepaid meter yami?",
           "Ke kopa thuso ka prepaid meter ya ka, nka ikopanya le mang?",
            "Wie moet ek kontak as ek probleme het met my voorafbetaalde meter?"
@@ -24,6 +26,7 @@
         "intent": "purchase_electricity",
         "examples": [
           "How can I purchase electricity for my prepaid meter?",
+          "How can I load electricity?",  
           "Ngingayithenga kanjani ugesi we-prepaid meter yami?",
           "Nka reka jwang motlakase bakeng sa prepaid meter ya ka?",
           "Hoe kan ek elektrisiteit koop vir my voorafbetaalde meter?"
@@ -34,6 +37,7 @@
         "intent": "transfer_credit",
         "examples": [
           "Can I transfer my prepaid meter credit to another meter or property?",
+          "It it possible to give my prepaid creidt to someone else?",  
           "Ngingadlulisela yini isikweletu se-prepaid meter yami kwenye i-meter noma esakhiweni?",
           "Nka fetisetsa jwang tjhelete ya prepaid meter ya ka meter e nngwe kapa ntlong e nngwe?",
           "Kan ek my voorafbetaalde meterkrediet oordra na 'n ander meter of eiendom?"
@@ -44,6 +48,7 @@
         "intent": "meter_protection",
         "examples": [
           "How can I protect my meter from tampering or theft?",
+          "What can I do to protect my meter from skelms",
           "Ngingayivikela kanjani i-meter yami ekuphazamiseni noma ekwebelweni?",
           "Nka sireletsa jwang meter ya ka hore e se ke ya utsuwa kapa ya qhekellwa?",
           "Hoe kan ek my meter beskerm teen knoeiery of diefstal?"
@@ -54,6 +59,7 @@
         "intent": "error_codes",
         "examples": [
           "What should I do if my meter displays an error code?",
+          "My meter shows this error code, what must I do?",
           "Kufanele ngenzeni uma i-meter yami ibonisa ikhodi yephutha?",
           "Ke etsang ha meter ya ka e bontsha khoutu ya phoso?",
           "Wat moet ek doen as my meter 'n foutkode vertoon?"
@@ -64,6 +70,7 @@
         "intent": "check_balance",
         "examples": [
           "How can I check my remaining electricity balance?",
+          "Hw do I check how much elecrticity I have left?",
           "Ngingayibheka kanjani ibhalansi yegesi esele?",
           "Nka hlahloba jwang chelete e setseng ya motlakase?",
           "Hoe kan ek my oorblywende elektrisiteitsbalans nagaan?"
@@ -74,6 +81,8 @@
         "intent": "track_usage",
         "examples": [
           "Can I track my electricity usage over time?",
+          "Is it possible to see how my consumption changes month to month?",
+          "How can I check how much electricity I used last month?",
           "Ngingakulandela yini ukusetshenziswa kwegasi lwami ngokuhamba kwesikhathi?",
           "Nka latela jwang tshebediso ya motlakase wa ka ka nako?",
           "Kan ek my elektrisiteitsverbruik oor tyd monitor?"
@@ -84,6 +93,7 @@
         "intent": "hexing_comms_failed",
         "examples": [
           "My Hexing meter is displaying a 'Comms Failed' message. What should I do?",
+          "What does 'Comms Failed' mean?",  
           "I-meter yami ye-Hexing ibonisa umlayezo othi 'Comms Failed'. Kufanele ngenzeni?",
           "Meter ya ka ya Hexing e bontsha molaetsa wa 'Comms Failed'. Ke etsang?",
           "My Hexing meter vertoon 'Comms Failed'. Wat moet ek doen?"
@@ -94,6 +104,7 @@
         "intent": "hexing_blank_screen",
         "examples": [
           "What should I do if my Hexing meter is showing a blank screen?",
+          "What does it mean if the meter is blank?",
           "Kufanele ngenzeni uma i-meter yami ye-Hexing ibonisa isikrini esingenalutho?",
           "Ke etsang ha meter ya ka ya Hexing e bontsha skrineng se se nang letho?",
           "Wat moet ek doen as my Hexing-meter 'n leë skerm wys?"
@@ -104,6 +115,7 @@
         "intent": "refund",
         "examples": [
           "Can I get a refund if I accidentally purchase the wrong amount of electricity?",
+          "I want to get my money back because I bought too much electrcity",
           "Ngingathola yini ukubuyiselwa imali uma ngithenga amaphutha ogesi we-prepaid?",
           "Nka fumana puseletso haeba ke rekile motlakase o fosahetseng?",
           "Kan ek 'n terugbetaling kry as ek per ongeluk die verkeerde hoeveelheid elektrisiteit koop?"
@@ -114,6 +126,7 @@
         "intent": "tid_rollover",
         "examples": [
           "What is the TID Rollover, and why is it important?",
+          "Please tell me what is TID?",  
           "Yini i-TID Rollover, futhi kungani ibalulekile?",
           "Ke eng TID Rollover, mme hobaneng e le ya bohlokwa?",
           "Wat is die TID Rollover, en waarom is dit belangrik?"
@@ -124,6 +137,7 @@
         "intent": "tid_rollover_process",
         "examples": [
           "How do I perform the TID Rollover on my meter?",
+          "What must I do for TID rollover",
           "Ngingayenza kanjani i-TID Rollover ku-meter yami?",
           "Nka etsa jwang TID Rollover meter ya ka?",
           "Hoe voer ek die TID Rollover op my meter uit?"
@@ -134,6 +148,7 @@
         "intent": "tid_rollover_requirement",
         "examples": [
           "How will I know if my meter needs the TID Rollover update?",
+          "Do I have to do the TID rollover thing?",
           "Ngizokwazi kanjani ukuthi i-meter yami idinga ukubuyekezwa kwe-TID Rollover?",
           "Ke tla tseba jwang ha meter ya ka e hloka ntjhafatso ya TID Rollover?",
           "Hoe sal ek weet of my meter die TID Rollover-opdatering benodig?"
@@ -144,6 +159,7 @@
         "intent": "bxc_meters",
         "examples": [
           "Do BXC smart meters require the TID rollover update?",
+          "I have a smart meter, does it need a TID rollover?",
           "Ngabe ama-meter e-BXC adinga ukubuyekezwa kwe-TID Rollover?",
           "Na meter ya BXC e hloka ntjhafatso ya TID Rollover?",
           "Benodig BXC-slimmeters die TID Rollover-opdatering?"
@@ -154,6 +170,7 @@
         "intent": "key_change_tokens",
         "examples": [
           "What are key change tokens, and why am I seeing them on my receipt?",
+          "Why are there three tokens on my slip?",
           "Yini ama-key change tokens, futhi kungani ngiwabona kwirisidi lami?",
           "Ke eng key change tokens, mme hobaneng ke a bona lenaneng la ka?",
           "Wat is sleutelveranderingtoken en waarom sien ek dit op my kwitansie?"
@@ -164,6 +181,7 @@
         "intent": "enter_key_change_tokens",
         "examples": [
           "How do I enter the key change tokens?",
+          "Where do I put the key change tokens?",
           "Ngingawafaka kanjani ama-key change tokens?",
           "Nka kenya jwang key change tokens?",
           "Hoe voer ek die sleutelveranderingtoken in?"
@@ -174,6 +192,7 @@
         "intent": "use_old_tokens",
         "examples": [
           "Can I use my old credit tokens after the update?",
+          "I can't put my old tokens since I did the TID rollover?",
           "Ngingawasebenzisa yini ama-tokens ami amadala ngemva kokubuyekeza?",
           "Nka sebedisa key change tokens tsa khale kamora ntjhafatso?",
           "Kan ek my ou krediettokens gebruik ná die opdatering?"
@@ -184,6 +203,7 @@
         "intent": "update_success",
         "examples": [
           "How do I know if my meter has been successfully updated?",
+          "How do I check that I did it right?",
           "Ngizokwazi kanjani ukuthi i-meter yami ibuyekezwe ngempumelelo?",
           "Ke tla tseba jwang ha meter ya ka e ntjhafatswa ka katleho?",
           "Hoe weet ek of my meter suksesvol opgedateer is?"
@@ -194,6 +214,7 @@
         "intent": "update_failure",
         "examples": [
           "What should I do if my meter doesn’t accept the key change tokens?",
+          "I don't know what to do because the key change tokens are not working",
           "Kufanele ngenzeni uma i-meter yami ingamukeli ama-key change tokens?",
           "Ke etsang ha meter ya ka e sa amohele key change tokens?",
           "Wat moet ek doen as my meter nie die sleutelveranderingtoken aanvaar nie?"
@@ -204,15 +225,17 @@
         "intent": "key_change_deadline",
         "examples": [
           "Is there a deadline for using the key change tokens?",
+          "When is the last day for doing the change over?",
           "Ngabe kukhona umnqamulajuqu wokusebenzisa ama-key change tokens?",
           "Na ho na le nako ya ho sebelisa key change tokens?",
           "Is daar 'n sperdatum vir die gebruik van die sleutelveranderingtoken?"
         ],
-        "answer": "If your meter doesn't accept the key change tokens, try re-entering them carefully. If the issue persists, contact your service provider's support team for assistance."
+        "answer": "You must enter the key change tokens before the TID Rollover cut-off in November 2024. Failing to do so will prevent your meter from accepting new credit tokens, leading to a loss of electricity supply."
       },{
         "intent": "future_key_change_tokens",
         "examples": [
           "Will I get new key change tokens with every electricity purchase?",
+          "Is it possible to get new key change numbers?",
           "Ngizothola ama-key change tokens amasha njalo lapho ngithenga ugesi?",
           "Na ke tla fumana key change tokens e ncha ka nako e nngwe le e nngwe ha ke reka motlakase?",
           "Sal ek nuwe sleutelveranderingtoken kry met elke elektrisiteitsaankoop?"
@@ -223,6 +246,7 @@
         "intent": "key_change_cost",
         "examples": [
           "Will I be charged for the key change tokens?",
+          "I don't want to pay for the key change tokens",
           "Ngizokhokhiswa yini ama-key change tokens?",
           "Na ke tla lefshoa bakeng sa key change tokens?",
           "Sal ek gehef word vir die sleutelveranderingtoken?"
@@ -233,6 +257,7 @@
         "intent": "rollover_deadline",
         "examples": [
           "What happens if I do not perform the update by the deadline?",
+          "What if I am late to do the update?",
           "Kuzokwenzekani uma ngingawenzi ukubuyekeza ngaphambi komnqamulajuqu?",
           "Ho etsahalang ha ke sa etse ntjhafatso pele nako e fela?",
           "Wat gebeur as ek nie die opdatering teen die sperdatum uitvoer nie?"
@@ -243,6 +268,7 @@
         "intent": "meter_installation",
         "examples": [
           "How can I request a prepaid meter installation?",
+          "I want a prepaid meter",
           "Ngingacela kanjani ukufakelwa kwe-prepaid meter?",
           "Nka kopa jwang ho kenya prepaid meter?",
           "Hoe kan ek 'n voorafbetaalde meter-installasie aanvra?"
@@ -253,6 +279,7 @@
         "intent": "emergency_credit",
         "examples": [
           "How does emergency credit work on my prepaid meter?",
+          "I did not have money on the meter but the electricity did not turn off",
           "Isebenza kanjani i-emergency credit ku-prepaid meter yami?",
           "Emergency credit e sebetsa jwang ho prepaid meter ya ka?",
           "Hoe werk noodgebruikskrediet op my voorafbetaalde meter?"
@@ -263,6 +290,7 @@
         "intent": "meter_reading",
         "examples": [
           "Do I need to submit meter readings with a prepaid meter?",
+          "Do I have to show my electricity usage with prepaid?",
           "Ngidinga ukuthumela izifundo ze-meter nge-prepaid meter?",
           "Na ke hloka ho fana ka dipalo tsa meter ha ke sebedisa prepaid meter?",
           "Moet ek meterlesings indien met 'n voorafbetaalde meter?"
@@ -273,6 +301,7 @@
         "intent": "tariff_change",
         "examples": [
           "How will I know if my electricity tariff has changed?",
+          "Will they tell me when electricity will go up?",
           "Ngizokwazi kanjani uma intengo kagesi yami ishintshile?",
           "Ke tla tseba jwang ha tefiso ya motlakase e fetohile?",
           "Hoe sal ek weet as my elektrisiteitstarief verander het?"
@@ -283,6 +312,7 @@
         "intent": "meter_maintenance",
         "examples": [
           "Is there any maintenance required for my prepaid meter?",
+          "Can I get someone to just check my meter?",
           "Ngabe kukhona ukunakekela okudingekayo ku-prepaid meter yami?",
           "Na ho na le tlhokomelo e hlokahalang bakeng sa prepaid meter ea ka?",
           "Is daar enige instandhouding nodig vir my voorafbetaalde meter?"
@@ -303,6 +333,7 @@
         "intent": "load_shedding",
         "examples": [
           "How does load shedding affect my prepaid meter?",
+          "Will load shedding break my meter?",
           "Ukucishwa kukagesi kuthinta kanjani i-prepaid meter yami?",
           "Ho khaoha hoa motlakase ho ama prepaid meter ea ka joang?",
           "Hoe beïnvloed kragonderbreking my voorafbetaalde meter?"
@@ -313,6 +344,7 @@
         "intent": "meter_relocation",
         "examples": [
           "Can I move my prepaid meter to a different property?",
+          "I am moving somewhere, can I take my meter with me?",
           "Ngingayisusa yini i-prepaid meter yami ngiyise komunye umuzi?",
           "Na nka tsamaisa prepaid meter ea ka ho ea setša se seng?",
           "Kan ek my voorafbetaalde meter na 'n ander eiendom verskuif?"
@@ -323,6 +355,7 @@
         "intent": "consumption_history",
         "examples": [
           "How can I view my electricity consumption history?",
+          "Can I see how much electricty I used?",
           "Ngingabuka kanjani umlando wokusetshenziswa kukagesi wami?",
           "Nka sheba histori ea tšebeliso ea motlakase oa ka joang?",
           "Hoe kan ek my elektrisiteitsverbruikgeskiedenis sien?"
@@ -333,6 +366,7 @@
         "intent": "meter_swap",
         "examples": [
           "What is the process for swapping a faulty prepaid meter?",
+          "This meter was broken when I received it, what must I do?",
           "Yini inqubo yokushintsha i-prepaid meter engasebenzi kahle?",
           "Ke eng mokhoa oa ho fapanyetsana prepaid meter e sa sebetseng hantle?",
           "Hoe kan ek my foutiewe voorafbetaalde meter ruil?"
