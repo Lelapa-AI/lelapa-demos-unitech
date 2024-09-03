@@ -35,6 +35,13 @@ async def root():
 
 @app.post("/faq")
 async def answer_question(query: Query):
+
+    if query.language and query.language not in ['eng_Latn', 'zul_Latn', 'sot_Latn', 'afr_Latn']:
+        return {"detail": "Language not accommodated."}
+    
+    if not query.question:
+        return {"detail": "Question field required"}
+     
     try:
         # Pass both question and language to the answer_question method
         response = bot_bot.answer_question(query.question, query.language)

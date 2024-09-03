@@ -76,7 +76,7 @@ class EskomFAQBot:
                         break
                 
                 # Translate answer if language is specified
-                if language:
+                if language and language not in ['eng_Latn']:
                     response = self.translate_answer(answer, language)
                     answer = response['translation'][0]['translated_text']
                 
@@ -85,4 +85,4 @@ class EskomFAQBot:
                 return "No probabilities found in classification results."
         except Exception as e:
             print(f"An error occurred while classifying the input: {e}")
-            return "Error processing the question."
+            return e
