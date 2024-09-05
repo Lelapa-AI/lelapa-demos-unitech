@@ -10,11 +10,11 @@ class EskomFAQBot:
 
         # Load the JSON data from both Eskom and Emfuleni FAQ files
         try:
-            with open(eskom_faq_file_path, 'r') as f:
+            with open(eskom_faq_file_path, 'r',  encoding='utf-8') as f:
                 eskom_data = json.load(f)
                 self.faq_data['faq'].extend(eskom_data['faq'])
 
-            with open(emfuleni_faq_file_path, 'r') as f:
+            with open(emfuleni_faq_file_path, 'r',  encoding='utf-8') as f:
                 emfuleni_data = json.load(f)
                 self.faq_data['faq'].extend(emfuleni_data['faq'])
         except FileNotFoundError as e:

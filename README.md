@@ -50,15 +50,16 @@ curl -X POST http://localhost:8000/faq \
 Create a `.env` file in the root directory of the project with the following variables:
 
 ```
-VULAVULA_API_TOKEN=your_vulavula_api_token
-FAQ_FILE_PATH=/path/to/your/faq/file
+VULAVULA_API_TOKEN=token
+EMFULENI_FAQ_FILE_PATH=data\emfuleni_faqs.json
+ESKOM_FAQ_FILE_PATH=data\eskom_faqs.json
 ```
 
 - `VULAVULA_API_TOKEN`: Your API token for the VulaVula service.
 - `EMFULENI_FAQ_FILE_PATH`: The path to the FAQ file from eskom used by the application.
 - `ESKOM_FAQ_FILE_PATH`: The path to the FAQ file from emfuleni used by the application.
 
-Replace `your_vulavula_api_token` and `/path/to/your/faq/file` with your actual values.
+Replace `your_vulavula_api_token` with your actual value.
 
 ## Running with Docker
 
