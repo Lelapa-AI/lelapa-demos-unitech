@@ -23,6 +23,7 @@ vulavula_token = os.getenv("VULAVULA_API_TOKEN")
 eskom_faq_file_path = os.getenv("ESKOM_FAQ_FILE_PATH")
 emfuleni_faq_file_path = os.getenv("EMFULENI_FAQ_FILE_PATH")
 
+# print(vulavu  la_token, eskom_faq_file_path, emfuleni_faq_file_path)
 bot_bot = EskomFAQBot(vulavula_token, eskom_faq_file_path, emfuleni_faq_file_path)
 
 class Query(BaseModel):

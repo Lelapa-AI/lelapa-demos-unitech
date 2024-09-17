@@ -27,7 +27,7 @@ lelapa-demos-unitech is a FastAPI-based application that allows users to query E
 4. Run the script to collect FAQ data from Eskom Website:
    ```
    cd src/lelapa_demos_unitech/
-   pdm run data
+   pdm run data.py
    ```
 
 5. Start the API:
